@@ -38,5 +38,15 @@ public class WebSiteController {
         webSiteService.deleteToDo(id);
     }
 
+    @GetMapping("/undo")
+    public void undo() {
+        webSiteService.undoLastChange();
+    }
+
+    @GetMapping("/redo")
+    public void redo() {
+        webSiteService.redoLastChange();
+    }
+
 
 }
